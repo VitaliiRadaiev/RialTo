@@ -1,0 +1,65 @@
+.johnnyl-block {
+    margin-bottom: 122px;
+    @include mb();
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+
+    &__column-1 {
+        flex: 1 1 auto;
+        margin-right: 40px;
+        max-width: 624px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 0;
+
+        & .btn-default {
+            align-self: flex-start;
+
+
+            @media (max-width: $md2+px) {
+                align-self: center;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+            margin: 0 auto 30px;
+            align-items: center;
+        }
+    }
+
+    &__column-2 {
+        flex: 0 0 calc(43.038%);
+        text-align: center;
+        & img {
+            max-width: 100%;
+            height: auto;
+
+        }
+    }
+
+    &__title {
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 1.25em;
+        margin-bottom: 50px;
+
+        @media (max-width: $md3+px) {
+            font-size: 42px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+}

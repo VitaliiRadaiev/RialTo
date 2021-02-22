@@ -1,0 +1,133 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: all .3s ease;
+    &.is-menu-open {
+        background-color: $textColor;
+    }
+
+    &__body {
+        min-height: 201px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media (max-width: $md2+px) {
+            min-height: 114px;
+        }
+        @media (max-width: $md3+px) {
+            min-height: 86px;
+        }
+    }
+
+    &__logo {
+
+    }
+
+    &__menu {
+        margin-left: auto;
+        margin-right: 2px;
+    }
+
+    &__burger {
+        margin-left: 30px;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+
+
+.menu {
+    @media (max-width: $md2+px) {
+        position: absolute;
+        background-color: $textColor;
+        top: 100%;
+        left: 0;
+        padding: 10px 15px;
+        width: 100%;
+        height: calc(100vh - 114px);
+        display: none;
+        overflow: auto;
+    }
+
+    @media (max-width: $md3+px) {
+        height: calc(100vh - 86px);
+    }
+
+    @media (min-width: 992px) {
+        display: block !important;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $md2+px) {
+            display: block;
+            text-align: center;
+        }
+
+        & > li {
+            &:not(:last-child) {
+                margin-right: 35px;
+
+                @media (max-width: $md2+px) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding: 5px 10px;
+        display: inline-block;
+        color: #ffffff;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1em;
+
+        & .letter {
+            display: inline-block;
+            transition: transform .2s ease;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 29px);
+            width: 0%;
+            height: 3px;
+            background-color:#fff;
+            transition: all .3s ease;
+
+            @media (max-width: $md2+px) {
+                display: none
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.active {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
