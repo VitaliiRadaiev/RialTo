@@ -215,7 +215,7 @@ textarea {
 		left: 50%;
 		width: 100%;
 		transform: translate(-50%, 0);
-		top: 61px;
+		top: 67px;
 		pointer-events: none;
 		mix-blend-mode: difference;
 
@@ -251,7 +251,26 @@ textarea {
 
 // === title ========================================================================
 .title-1 {
+	font-family: $mainFontFamily;
+	font-size: 115px;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0.6em;
 
+	@media (max-width: $md2+px) {
+		font-size: 100px;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 80px;
+		margin-bottom: 15px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 50px;
+		margin-bottom: 10px;
+	}
 }
 .title-2 {
 
@@ -387,6 +406,8 @@ button.btn-default {
 @import "../common/footer/#footer";
 @import "../common/events-slider/events-slider";
 @import "../common/johnnyl-block/johnnyl-block";
+@import "../common/main-slider/main-slider";
+@import "../common/quote-block/quote-block";
 // ==== BLOCKS =====================================================
 
 

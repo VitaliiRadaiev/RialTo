@@ -10,7 +10,7 @@
     }
 
     &__body {
-        min-height: 201px;
+        min-height: 218px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -29,7 +29,7 @@
 
     &__menu {
         margin-left: auto;
-        margin-right: 2px;
+        margin-right: 15px;
     }
 
     &__burger {
@@ -74,7 +74,7 @@
 
         & > li {
             &:not(:last-child) {
-                margin-right: 35px;
+                margin-right: 52px;
 
                 @media (max-width: $md2+px) {
                     margin-right: 0;

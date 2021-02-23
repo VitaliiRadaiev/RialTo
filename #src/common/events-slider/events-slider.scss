@@ -1,5 +1,5 @@
 .events {
-    margin-bottom: 149px;
+    margin-bottom: 267px;
     @include mb();
 
     &__body {
@@ -29,9 +29,9 @@
 
     &__head-title {
         margin-right: 30px;
-        color: $textColor;
+        color: #fff;
         font-size: 52px;
-        font-weight: 700;
+        font-weight: 300;
         line-height: 1.25em;
         margin-bottom: 25px;
 
@@ -56,7 +56,7 @@
         & .swiper-slide {
             display: flex;
             box-shadow: 4px 33px 26px rgba(0, 0, 0, 0.16);
-
+            background-color: #fff;
             @media (max-width: $md2+px) {
                 flex-direction: column-reverse;
             }
@@ -175,9 +175,9 @@
             flex: 1 1 auto;
             height: 5px;
             border-radius: 0;
-
+            background-color: rgba(#fff, 0.3);
             & .swiper-scrollbar-drag {
-                background-color: $textColor;
+                background-color: #fff;
                 border-radius: 0;
             }
         }
@@ -191,7 +191,7 @@
         cursor: pointer;
         @media (min-width: 992px) {
             &:hover {
-                background-color: rgba($textColor, 0.1);
+                background-color: rgba(#fff, 0.1);
             }
         }
 
@@ -200,13 +200,13 @@
 
             @media (min-width: 992px) {
                 &:hover {
-                    background-color: rgba($textColor, 0);
+                    background-color: rgba(#fff, 0);
                 }
             }
 
             & > span {
                 & svg {
-                    stroke: rgba($textColor, 0.4);
+                    stroke: rgba(#fff, 0.4);
                 }
             }
         }
@@ -220,7 +220,7 @@
                 width: 100%;
                 height: auto;
                 fill: none;
-                stroke: $textColor;
+                stroke: #fff;
             }
         }
     }

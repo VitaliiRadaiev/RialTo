@@ -869,29 +869,7 @@ if(priceSlider) {
 	}
 	$('.burger').click((e) => burgerBtnAnimation(e));
 // === Burger Handler =====================================================================	;
-	{
-    let header = document.querySelector('.promo-header');
-    if(header) {
-
-        let dataSlider = new Swiper(header.querySelector('.promo-header__slider'), {
-            slidesPerView: 1,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            effect: 'fade',
-            pagination: {
-              el: header.querySelector('.swiper-pagination'),
-              type: 'fraction',
-            },
-            scrollbar: { el: header.querySelector('.swiper-scrollbar') },
-            navigation: {
-              nextEl: header.querySelector('.promo-header__btn_next'),
-              prevEl: header.querySelector('.promo-header__btn_prev'),
-            },
-          });
-    }
-  }    
+	
 ;
 	let parallaxItems = document.querySelectorAll('._parallax');
 
@@ -944,6 +922,52 @@ function parallax(elem) {
                 })
             }
         })
+    }
+};
+	{
+
+    let mainSliders = document.querySelectorAll('.main-slider');
+    if(mainSliders.length) {
+        mainSliders.forEach(slider => {
+            let dataSlider = new Swiper(slider.querySelector('.main-slider__body'), {
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                effect: 'fade',
+                pagination: {
+                  el: slider.querySelector('.swiper-pagination'),
+                  type: 'fraction',
+                },
+                navigation: {
+                  nextEl: slider.querySelector('.main-slider__btn_next'),
+                  prevEl: slider.querySelector('.main-slider__btn_prev'),
+                },
+              });
+        });
+    }
+  }   ;
+	{
+    let quoteBLock = document.querySelector('.quote-block');
+    if(quoteBLock) {
+        let dataSlider = new Swiper(quoteBLock.querySelector('.quote-block__slider .swiper-container'), {
+            slidesPerView: 1,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+              el: quoteBLock.querySelector('.swiper-pagination'),
+              type: 'fraction',
+            },
+            navigation: {
+              nextEl: quoteBLock.querySelector('.quote-block__btn_next'),
+              prevEl: quoteBLock.querySelector('.quote-block__btn_prev'),
+            },
+          });
     }
 };
 	

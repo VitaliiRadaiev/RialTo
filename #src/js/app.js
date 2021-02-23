@@ -49,6 +49,8 @@ $(document).ready(function () {
 	@@include('blocks/parallax.js');
 	@@include('../common/events-slider/events-slider.js');
 	@@include('../common/header/header.js');
+	@@include('../common/main-slider/main-slider.js');
+	@@include('../common/quote-block/quote-block.js');
 	
 });
 
