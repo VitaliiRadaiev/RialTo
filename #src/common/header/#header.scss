@@ -9,17 +9,36 @@
         background-color: $textColor;
     }
 
+    &.bottom-line {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 3.5rem;
+            height: 0.4rem;
+            background-color: rgba(#fff, 0.1);
+            z-index: 2;
+            width: 100%;
+
+            @media (max-width: $md2+px) {
+                bottom: -0.5rem;
+            }
+        }
+    }
+
     &__body {
-        min-height: 218px;
+        min-height: 21.8rem;
         display: flex;
         align-items: center;
         justify-content: flex-end;
 
         @media (max-width: $md2+px) {
-            min-height: 114px;
+            min-height: 11.4rem;
         }
         @media (max-width: $md3+px) {
-            min-height: 86px;
+            min-height: 8.6rem;
         }
     }
 
@@ -33,7 +52,7 @@
     }
 
     &__burger {
-        margin-left: 30px;
+        margin-left: 3rem;
         @media (min-width: 992px) {
             display: none;
         }
@@ -48,15 +67,15 @@
         background-color: $textColor;
         top: 100%;
         left: 0;
-        padding: 10px 15px;
+        padding: 3rem 1.5rem;
         width: 100%;
-        height: calc(100vh - 114px);
+        height: calc(100vh - 11.4rem);
         display: none;
         overflow: auto;
     }
 
     @media (max-width: $md3+px) {
-        height: calc(100vh - 86px);
+        height: calc(100vh - 8.6rem);
     }
 
     @media (min-width: 992px) {
@@ -74,11 +93,11 @@
 
         & > li {
             &:not(:last-child) {
-                margin-right: 52px;
+                margin-right: 5.2rem;
 
                 @media (max-width: $md2+px) {
                     margin-right: 0;
-                    margin-bottom: 20px;
+                    margin-bottom: 2rem;
                 }
             }
         }
@@ -86,10 +105,10 @@
 
     &__link {
         position: relative;
-        padding: 5px 10px;
+        padding: 0.5rem 1rem;
         display: inline-block;
         color: #ffffff;
-        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 700;
         line-height: 1em;
 
@@ -105,7 +124,7 @@
             left: 50%;
             transform: translate(-50%, 29px);
             width: 0%;
-            height: 3px;
+            height: 0.3rem;
             background-color:#fff;
             transition: all .3s ease;
 

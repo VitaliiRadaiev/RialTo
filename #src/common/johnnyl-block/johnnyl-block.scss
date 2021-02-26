@@ -1,9 +1,9 @@
 .johnnyl-block {
-    padding: 177px 0 286px;
+    padding: 17.7rem 0 28.6rem;
     background-color: #fff;
 
     @media (max-width: $md2+px) {
-        padding: 100px 0 186px;
+        padding: 10rem 0 18.6rem;
     }
 
     &__body {
@@ -18,12 +18,12 @@
 
     &__column-1 {
         flex: 1 1 auto;
-        margin-right: 40px;
-        max-width: 624px;
+        margin-right: 4rem;
+        max-width: 62.4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 86px 0 30px;
+        padding: 8.6rem 0 3rem;
 
         @media (max-width: $md2+px) {
             padding-top: 0;
@@ -40,7 +40,7 @@
 
         @media (max-width: $md2+px) {
             text-align: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 3rem;
             align-items: center;
         }
     }
@@ -56,17 +56,17 @@
     }
 
     &__title {
-        font-size: 52px;
+        font-size: 5.2rem;
         font-weight: 300;
         line-height: 1.25em;
-        margin-bottom: 57px;
+        margin-bottom: 5.7rem;
 
         @media (max-width: $md3+px) {
-            font-size: 42px;
+            font-size: 4.2rem;
         }
         @media (max-width: $md4+px) {
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
         }
     }
 

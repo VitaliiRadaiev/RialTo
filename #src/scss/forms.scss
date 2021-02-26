@@ -37,39 +37,48 @@
 	&__item {
 		position: relative;
 		//font-family: $mainFontFamily;
-		min-width: 294px;
 	}
 	// .select__title
 	&__title {
-		color: $textColor;
-		background-color: #fff;
+		background-color: transparent;
 		cursor: pointer;
-		@media (max-width: $md2+px) {
-			font-size: 18px;
+		position: relative;
+		padding-bottom: 2rem;
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: 0;
+			height: 0.4rem;
+			width: 100%;
+			background-color: rgba(#fff, 0.1);
 		}
 	}
 	// .select__value
 	&__value {
 		display: flex;
-		font-size: 14px;
-		line-height: 170%;
-		padding: 0px 15px;
-		align-items: center;
 		justify-content: space-between;
 		flex-direction: row-reverse;
+
 		span {
 			//font-family: $mainFontFamily;
-			display: -webkit-box;
-			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;
+			// display: -webkit-box;
+			// -webkit-line-clamp: 1;
+			// -webkit-box-orient: vertical;
 		}
+
 		&:before {
-			content: "+";
+			content: "";
 			display: inline-block;
 			transition: all 0.3s ease 0s;
-/*			width: 11px;
-			height: 7px;*/
-			//background: url("../img/icons/select.svg") center / 100% no-repeat;
+			width: 2.8rem;
+			height: 1.6rem;
+			background: url("../img/icons/chevron-white.svg") center / 100% no-repeat;
+			margin-top: 2rem;
+
+			@media (max-width: $md4+px) {
+				margin-top: 1rem;
+			}
 		}
 	}
 	&__input {
@@ -79,32 +88,27 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
 		display: none;
 		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
+		top: 100%;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
-		border-top: 0;
-		border-top: 0;
-		font-size: 14px;
+		background-color: #211a1b;
+		box-shadow: 0 0 15px rgba(#fff, 0.2);
+		font-size: 1.9rem;
 		line-height: 170%;
-		padding: 10px 0px 5px 0px;
-		color: $textColor;
-		box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
-		max-height: 315px;
+		color: #fff;
+		max-height: 31.5rem;
 		overflow-y: auto;
 	}
 	// .select__option
 	&__option {
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 0.5rem 1.5rem;
 		margin: 0px 0px 0px 0px;
 		@media (min-width: 992px) {
 			&:hover {
-				background: rgba($mainColor, 0.3);
+				background: rgba(#fff, 0.1);
 			}
 		}
 	}
@@ -112,7 +116,7 @@
 		z-index: 5;
 		.select__value {
 			&:before {
-				transform: rotate(-180deg);
+				transform: scale(1, -1)
 			}
 		}
 		.select__options {
@@ -148,118 +152,118 @@
 // //</INPUT>====================================================================================================
 
 //<RADIO>====================================================================================================
-.radio-wrap {
+// .radio-wrap {
 
 
-    &__radio {
-        display: none;
+//     &__radio {
+//         display: none;
 
-        &:checked {
-            & + .radio-wrap__label {
-                &:after {
-                    transform: translateY(-50%) scale(1);
-                }
-            }
-        }
-    }
+//         &:checked {
+//             & + .radio-wrap__label {
+//                 &:after {
+//                     transform: translateY(-50%) scale(1);
+//                 }
+//             }
+//         }
+//     }
 
-    &__label {
-        display: flex;
-        align-items: center;
-        //font-family: $seconFontFamily;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 120%;
-        text-transform: capitalize;
-        color: rgba(#000, 0.5);
-        position: relative;
-        padding-left: 30px;
-        cursor: pointer;
+//     &__label {
+//         display: flex;
+//         align-items: center;
+//         //font-family: $seconFontFamily;
+//         font-weight: bold;
+//         font-size: 18px;
+//         line-height: 120%;
+//         text-transform: capitalize;
+//         color: rgba(#000, 0.5);
+//         position: relative;
+//         padding-left: 30px;
+//         cursor: pointer;
 
-        &.visamaster {
-            color: #000;
-        }
+//         &.visamaster {
+//             color: #000;
+//         }
 
-        & > span {
-            min-width: 50px;
-            margin-right: 15px;
+//         & > span {
+//             min-width: 50px;
+//             margin-right: 15px;
 
-            & img {
-                width: 100%;
-            }
-        }
+//             & img {
+//                 width: 100%;
+//             }
+//         }
 
-        &:before {
-            position: absolute;
-            content: '';
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-            border: 1px solid #000;
-        }
+//         &:before {
+//             position: absolute;
+//             content: '';
+//             top: 50%;
+//             left: 0;
+//             transform: translateY(-50%);
+//             height: 15px;
+//             width: 15px;
+//             border-radius: 50%;
+//             border: 1px solid #000;
+//         }
 
-        &:after {
-            position: absolute;
-            content: '';
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%) scale(0);
-            transition: all .2s ease;
-            height: 9px;
-            width: 9px;
-            border-radius: 50%;
-            background: red;
-            left: 3px;
+//         &:after {
+//             position: absolute;
+//             content: '';
+//             top: 50%;
+//             left: 0;
+//             transform: translateY(-50%) scale(0);
+//             transition: all .2s ease;
+//             height: 9px;
+//             width: 9px;
+//             border-radius: 50%;
+//             background: red;
+//             left: 3px;
             
-        }
-    }
-}
+//         }
+//     }
+// }
 //</RADIO>====================================================================================================
 
 // //<CHECK (chk+tab)>====================================================================================================
-.checkbox-wrap {
-    & .checkbox {
-        display: none;
+// .checkbox-wrap {
+//     & .checkbox {
+//         display: none;
 
-        &:checked {
+//         &:checked {
 
-            & + .checkbox-wrap__label {
-                &:before {
-                    background-image: url(../img/icons/check.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-            }
-        }
-    }
+//             & + .checkbox-wrap__label {
+//                 &:before {
+//                     background-image: url(../img/icons/check.svg);
+//                     background-size: contain;
+//                     background-repeat: no-repeat;
+//                     background-position: center;
+//                 }
+//             }
+//         }
+//     }
 
-    &__label {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 170%;
-        color: #000;
-        position: relative;
-        cursor: pointer;
-        display: flex;
+//     &__label {
+//         font-style: normal;
+//         font-weight: normal;
+//         font-size: 14px;
+//         line-height: 170%;
+//         color: #000;
+//         position: relative;
+//         cursor: pointer;
+//         display: flex;
 
 
 
-        &:before {
-            margin-top: 3.5px;
-            margin-right: 15px;
-            content: '';
-            height: 14px;
-            min-width: 14px;
-            background-color: #F8F8FA;
-            border: 1px solid rgba(17, 17, 17, 0.1);
-        }   
-    }
-}
+//         &:before {
+//             margin-top: 3.5px;
+//             margin-right: 15px;
+//             content: '';
+//             height: 14px;
+//             min-width: 14px;
+//             background-color: #F8F8FA;
+//             border: 1px solid rgba(17, 17, 17, 0.1);
+//         }   
+//     }
+// }
 // //</CHECK>====================================================================================================
 
 // //<OPTIONS (opt+tab)>====================================================================================================

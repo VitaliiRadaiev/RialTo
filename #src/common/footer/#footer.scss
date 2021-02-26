@@ -1,13 +1,13 @@
 .footer {
     background-color: #f5f5f5;
-    padding: 194px 0 102px;
+    padding: 19.4rem 0 10.2rem;
 
     @media (max-width: 1267px) {
-        padding: 50px 0 102px;
+        padding: 5rem 0 10.2rem;
     }
 
     @media (max-width: $md3+px) {
-        padding-bottom: 60px;
+        padding-bottom: 6rem;
     }
 
     &__body {
@@ -16,9 +16,9 @@
 
     &__decor {
         position: absolute;
-        bottom: -1px;
-        right: -177px;
-        width: 180px;
+        bottom: -0.1rem;
+        right: -17.7rem;
+        width: 18rem;
 
         & img {
             width: 100%;
@@ -29,8 +29,8 @@
         }
 
         @media (max-width: $md4+px) {
-            bottom: 100px;
-            width: 120px;
+            bottom: 10rem;
+            width: 12rem
         }
     }
 
@@ -38,15 +38,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 224px;
+        margin-bottom: 22.4rem;
 
         @media (max-width: 1267px) {
             display: block;
-            margin-bottom: 120px;
+            margin-bottom: 12rem;
         }
 
         @media (max-width: $md3+px) {
-            margin-bottom: 40px;
+            margin-bottom: 4rem;
         }
     }
 
@@ -54,10 +54,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 130px;
+        margin-bottom: 13rem;
 
         @media (max-width: 1267px) {
-            margin-bottom: 100px;
+            margin-bottom: 10rem;
         }
     }
 
@@ -66,23 +66,23 @@
 
     &__logo {
         width: 100%;
-        max-width: 278px;
-        margin-right: 30px;
-        margin-bottom: 60px;
-        margin-top: 9px;
+        max-width: 27.8rem;
+        margin-right: 3rem;
+        margin-bottom: 6rem;
+        margin-top: 0.9rem;
         & img {
             width: 100%;
         }
 
         @media (max-width: $md3+px) {
-            margin: 0 auto 60px;
+            margin: 0 auto 6rem;
         }
     }
 
     &__form {
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
         flex: 1 1 auto;
-        max-width: 929px;
+        max-width: 92.9rem;
 
         @media (max-width: 1267px) {
             max-width: none;
@@ -97,16 +97,16 @@
 
 
     &__copy {
-        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 400;
         line-height: normal;
 
         @media (max-width: 374px) {
-            font-size: 15px;
+            font-size: 1.5rem;
         }
 
         & > span {
-            margin: 0 11px;
+            margin: 0 1.1rem;
         }
 
         & > a {
@@ -124,21 +124,21 @@
 .form-footer {
     border-bottom: 2px solid $textColor;
     &__title {
-        font-size: 49px;
+        font-size: 4.9rem;
         font-weight: 300;
-        line-height: 65px;
+        line-height: 6.5rem;
         line-height: 1.25em;
-        margin-bottom: 34px;
+        margin-bottom: 3.4rem;
 
         @media (max-width: $md3+px) {
-            font-size: 39px;
-            margin-bottom: 20px;
+            font-size: 3.9rem;
+            margin-bottom: 2rem;
             text-align: center;
         }
 
         @media (max-width: $md4+px) {
-            font-size: 29px;
-            margin-bottom: 10px;
+            font-size: 2.9rem;
+            margin-bottom: 1rem;
         }
     }
 
@@ -149,39 +149,39 @@
     &__input {
         flex: 1 1 auto;
         width: 100%;
-        min-height: 82px;
+        min-height: 8.2rem;
         display: flex;
         align-items: center;
         color: $textColor;
-        font-size: 24px;
+        font-size: 2.4rem;
         font-weight: 400;
         background-color: transparent;
 
         &::placeholder {
             color: rgba($textColor, 0.53);
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: 400;
 
             @media (max-width: $md4+px) {
-                font-size: 18px;
+                font-size: 1.8rem;
             }
         }
 
         @media (max-width: $md4+px) {
-            font-size: 18px;
-            min-height: 62px;
+            font-size: 1.8rem;
+            min-height: 6.2rem;
         }
     }
 
     &__button {
-        flex: 0 0 180px;
-        min-height: 82px;
+        flex: 0 0 18rem;
+        min-height: 8.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        padding: 10px 20px;
-        font-size: 19px;
+        padding: 1rem 2rem;
+        font-size: 1.9rem;
         font-weight: 700;
         text-transform: uppercase;
         background-color: transparent;
@@ -189,9 +189,9 @@
 
 
         @media (max-width: $md4+px) {
-            font-size: 15px;
-            min-height: 62px;
-            flex: 0 0 135px;
+            font-size: 1.5rem;
+            min-height: 6.2rem;
+            flex: 0 0 13.5rem;
         }
 
         @media (min-width: 992px) {
@@ -199,7 +199,7 @@
                 color: $mainColor;
 
                 & > svg {
-                    transform: translate(5px, -50%);
+                    transform: translate(0.5rem, -50%);
                     stroke: $mainColor;
                 }
             }
@@ -207,16 +207,16 @@
         & > svg {
             fill: none;
             stroke: $textColor;
-            width: 13px;
+            width: 1.3rem;
             height: auto;
             position: absolute;
             top: 50%;
-            right: 3px;
+            right: 0.3rem;
             transition: all .3s ease;
             transform: translateY(-50%);
 
             @media (max-width: $md4+px) {
-                width: 9px;
+                width: 0.9rem;
             }
         }
     }
@@ -228,20 +228,20 @@
     display: flex;
     flex-wrap: wrap;
     &__item {
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
         flex: 1 1 auto;
-        max-width: 238px;
-        min-width: 170px;
-        padding-right: 20px;
+        max-width: 23.8rem;
+        min-width: 17rem;
+        padding-right: 2rem;
     }
 
     &__title {
-        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 700;
         line-height: normal;
         text-transform: uppercase;
         display: block;
-        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
         transition: all .3s ease;
         cursor: pointer;
         color: $textColor;
@@ -253,13 +253,13 @@
     &__list {
         & > li {
             &:not(:last-child) {
-                margin-bottom: 15px;
+                margin-bottom: 1.5rem;
             }
         }
     }
 
     &__link {
-        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 400;
         line-height: normal;
         transition: all .3s ease;
@@ -272,15 +272,15 @@
 
 
 
-.social-block {
+.social {
     display: flex;
     & > li {
         &:not(:last-child) {
-            margin-right: 39px;
+            margin-right: 3.9rem;
         }
     }
     &__link {
-        height: 52px;
+        height: 5.2rem;
         display: inline-block;
 
         & > svg {

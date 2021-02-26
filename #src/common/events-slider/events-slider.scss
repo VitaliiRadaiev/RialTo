@@ -1,5 +1,5 @@
 .events {
-    margin-bottom: 267px;
+    margin-bottom: 26.7rem;
     @include mb();
 
     &__body {
@@ -10,10 +10,10 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 23px;
+        margin-bottom: 2.3rem;
 
         & .btn-default {
-            margin-bottom: 45px;
+            margin-bottom: 4.5rem;
         }
 
         @media (max-width: $md2+px) {
@@ -28,25 +28,25 @@
     }
 
     &__head-title {
-        margin-right: 30px;
+        margin-right: 3rem;
         color: #fff;
-        font-size: 52px;
+        font-size: 5.2rem;
         font-weight: 300;
         line-height: 1.25em;
-        margin-bottom: 25px;
+        margin-bottom: 2.5rem;
 
         @media (max-width: $md3+px) {
-            font-size: 42px;
+            font-size: 4.2rem;
             margin-right: 0;
         }
     }
 
     &__slider {
-        margin-bottom: 52px;
+        margin-bottom: 5.2rem;
 
 
         @media (max-width: $md3+px) {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
         }
 
         &.swiper-container {
@@ -55,7 +55,7 @@
 
         & .swiper-slide {
             display: flex;
-            box-shadow: 4px 33px 26px rgba(0, 0, 0, 0.16);
+            box-shadow: 0.4rem 3.3rem 2.6rem rgba(0, 0, 0, 0.16);
             background-color: #fff;
             @media (max-width: $md2+px) {
                 flex-direction: column-reverse;
@@ -67,15 +67,15 @@
         flex: 1 1 auto;
 
         @media (max-width: $md2+px) {
-            height: 500px;
+            height: 50rem;
         }
     }
 
     &__text-wrap {
-        flex: 0 0 405px;
-        padding: 52px 15px;
+        flex: 0 0 40.5rem;
+        padding: 5.2rem 1.5rem;
         text-align: center;
-        min-height: 716px;
+        min-height: 71.6rem;
         display: flex;
         flex-direction: column;
 
@@ -84,86 +84,86 @@
         }
 
         @media (max-width: $md3+px) {
-            padding: 30px 15px;
+            padding: 3rem 1.5rem;
         }
 
         & .btn-default {
             align-self: center;
-            margin-bottom: 32px;
+            margin-bottom: 3.2rem;
         }
     }
 
     &__label {
         color: $textColor;
-        font-size: 25px;
+        font-size: 2.5rem;
         font-weight: 700;
         text-transform: uppercase;
         line-height: 1.4em;
         position: relative;
-        margin-bottom: 100px;
+        margin-bottom: 10rem;
         display: inline-block;
         align-self: center;
         &:before {
             position: absolute;
             content: '';
             left: 50%;
-            transform: translate(-50%, 10px);
+            transform: translate(-50%, 1rem);
             bottom: 0;
-            height: 3px;
+            height: 0.3rem;
             background-color: $textColor;
             width: 110%;
         }
 
         @media (max-width: $md2+px) {
-            margin-bottom: 40px;
+            margin-bottom: 4rem;
         }
 
         @media (max-width: $md3+px) {
-            font-size: 20px;
+            font-size: 2rem;
         }
     }
 
     &__date {
-        font-size: 61px;
+        font-size: 6.1rem;
         font-weight: 700;
         text-transform: uppercase;
         line-height: 1em;
-        margin-bottom: 22px;
+        margin-bottom: 2.2rem;
 
         @media (max-width: $md3+px) {
-            font-size: 50px;
-            margin-bottom: 10px;
+            font-size: 5rem;
+            margin-bottom: 1rem;
         }
     }
 
     &__time {
-        font-size: 30px;
+        font-size: 3rem;
         font-weight: 400;
         line-height: 1em;
-        margin-bottom: 47px;
+        margin-bottom: 4.7rem;
 
         @media (max-width: $md2+px) {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
         }
 
         @media (max-width: $md3+px) {
-            font-size: 22px;
+            font-size: 2.2rem;
         }
     }
 
     &__title {
-        font-size: 30px;
+        font-size: 3rem;
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase;
-        margin-bottom: 37px;
+        margin-bottom: 3.7rem;
 
         @media (max-width: $md2+px) {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
         }
 
         @media (max-width: $md3+px) {
-            font-size: 22px;
+            font-size: 2.2rem;
         }
     }
 
@@ -173,7 +173,7 @@
 
         & .swiper-scrollbar {
             flex: 1 1 auto;
-            height: 5px;
+            height: 0.5rem;
             border-radius: 0;
             background-color: rgba(#fff, 0.3);
             & .swiper-scrollbar-drag {
@@ -184,7 +184,7 @@
     }
 
     &__slider-btn {
-        padding: 5px;
+        padding: 0.5rem;
         transition: all .3s ease;
         flex: 0 0 auto;
         transition: all .2s ease;
@@ -213,8 +213,8 @@
 
         & > span {
             display: block;
-            width: 15px;
-            height: 24px;
+            width: 1.5rem;
+            height: 2.4rem;
 
             & svg {
                 width: 100%;
@@ -226,28 +226,12 @@
     }
 
     &__slider-btn-prev {
-        margin-right: 35px;
-        transform: translateX(-5px);
+        margin-right: 3.5rem;
+        transform: translateX(-0.5rem);
     }
 
     &__slider-btn-next {
-        margin-left: 35px;
-        transform: translateX(5px);
+        margin-left: 3.5rem;
+        transform: translateX(0.5rem);
     }
-}
-.container {
-}
-
-.swiper-container {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.ibg {
-}
-
-.img-svg {
-}
-.swiper-scrollbar {
 }
