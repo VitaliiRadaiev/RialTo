@@ -289,14 +289,37 @@ textarea {
 	font-weight: 700;
 	line-height: 1em;
 	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 5.6em;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 4.6rem;
+	}
 }
 
 .title-3 {
+	font-size: 5.2rem;
+	font-weight: 300;
+	line-height: 1.25em;
 
+	@media (max-width: $md3+px) {
+		font-size: 4.2rem;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 3.6rem;
+	}
 }
 
 .title-4 {
+	color: #ffffff;
+	font-size: 4.2rem;
+	font-weight: 700;
+	line-height: 1.547em;
 
+	@media (max-width: $md3+px) {
+		font-size: 3.2rem;
+	}
 }
 
 .title-5 {
@@ -335,13 +358,18 @@ textarea {
 	padding: 0.5em 2.368em;
 	min-height: 3.421em;
 	border-radius: 999px;
-	border: 2px solid $textColor;
+	border: 0.2rem solid $textColor;
 	transition: all .3s ease;
-
+	white-space: nowrap;
 
 	&.btn-default_white {
 		color: #fff;
 		border-color: #fff;
+	}
+
+	&.btn-default_gray {
+		color: rgba(#fff, 0.3);
+		border-color: rgba(#fff, 0.3);
 	}
 
 	@media (max-width: $md4+px) {
@@ -392,12 +420,30 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
+	color: #ffffff;
+	font-size: 2.7rem;
+	font-weight: 400;
+	line-height: 1.63em;
+
+	@media (max-width: $md3+px) {
+		font-size: 1.9rem;
+	}
+
 	& h1 {}
 	& h2 {
 
 	}
 	& h3 {}
-	& h4 {}
+	& h4 {
+		color: #ffffff;
+		font-size: 4.2rem;
+		font-weight: 700;
+		line-height: 1.547em;
+		margin-bottom: 0.7em;
+		@media (max-width: $md3+px) {
+			font-size: 3.2rem;
+		}
+	}
 
 	& h5 {
 
@@ -405,7 +451,7 @@ button.btn-default {
 	& h6 {}
 
 	& p {
-
+		margin-bottom: 1.06em;
 	}
 
 	& ul {
@@ -437,8 +483,12 @@ button.btn-default {
 	@import "pages/#home";
 	// ==== AND HOME =====================================================
 	
-	// ==== AND HOME =====================================================
+	// ==== EVENTS LISTING =====================================================
 	@import "pages/#events-listing";
-	// ==== AND HOME =====================================================
+	// ==== AND EVENTS LISTING =====================================================
+	
+	// ==== EVENTS SINGLE DETAIL PAGE =====================================================
+	@import "pages/#events-detail";
+	// ==== AND EVENTS SINGLE DETAIL PAGE =====================================================
 	
 // ==== AND PAGES =====================================================
