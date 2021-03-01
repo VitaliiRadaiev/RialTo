@@ -190,6 +190,10 @@ textarea {
 	flex-direction: column;
 }
 
+._bg {
+	background-color: $bgColor;
+}
+
 
 .container {
 	max-width: 143.5rem;
@@ -303,7 +307,7 @@ textarea {
 	font-weight: 300;
 	line-height: 1.25em;
 
-	@media (max-width: $md3+px) {
+	@media (max-width: $md2+px) {
 		font-size: 4.2rem;
 	}
 	@media (max-width: $md3+px) {
@@ -474,6 +478,7 @@ button.btn-default {
 @import "../common/main-slider/main-slider";
 @import "../common/quote-block/quote-block";
 @import "../common/social-block/social-block";
+@import "../common/hero/hero";
 // ==== BLOCKS =====================================================
 
 
@@ -490,5 +495,9 @@ button.btn-default {
 	// ==== EVENTS SINGLE DETAIL PAGE =====================================================
 	@import "pages/#events-detail";
 	// ==== AND EVENTS SINGLE DETAIL PAGE =====================================================
+	
+	// ==== EAT PAGE =====================================================
+	@import "pages/#eat";
+	// ==== AND EAT PAGE =====================================================
 	
 // ==== AND PAGES =====================================================
