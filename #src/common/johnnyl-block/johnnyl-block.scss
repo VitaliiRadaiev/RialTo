@@ -6,6 +6,37 @@
         padding: 10rem 0 18.6rem;
     }
 
+    &.johnnyl-block_dark {
+        background-color: transparent;
+        color: #fff;
+        padding: 12.7rem 0 15rem;
+
+        @media (max-width: $md2+px) {
+            padding: 8rem 0 10rem;
+        }
+        @media (max-width: $md3+px) {
+            padding: 6rem 0 6rem;
+        }
+
+
+        & .johnnyl-block__column-1 {
+            max-width: 70.4rem;
+            padding-top: 5.6rem;
+
+            @media (max-width: $md2+px) {
+                padding-top: 0;
+            }
+        }
+
+        & .johnnyl-block__title {
+            margin-bottom: 2.7rem;
+
+            @media (max-width: $md4+px) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
     &__body {
         display: flex;
         justify-content: space-between;
@@ -67,6 +98,19 @@
         @media (max-width: $md4+px) {
             font-size: 2.8rem;
             margin-bottom: 2rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+        &.text-content {
+            font-size: 2.2rem;
+
+            & * {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 

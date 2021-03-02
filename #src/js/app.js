@@ -51,6 +51,7 @@ $(document).ready(function () {
 	@@include('../common/header/header.js');
 	@@include('../common/main-slider/main-slider.js');
 	@@include('../common/quote-block/quote-block.js');
+	@@include('../common/video/video.js');
 	
 });
 

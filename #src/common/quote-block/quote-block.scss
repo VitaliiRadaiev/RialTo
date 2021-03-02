@@ -13,6 +13,38 @@
         padding: 5rem 0 6.9rem;
     }
 
+    &.quote-block_white {
+        background-color: #fff;
+
+        & .quote-block__body {
+            color: $textColor;
+        }
+
+        & .quote-block__btn {
+            @media (min-width: 992px) {
+                &:hover {
+                    background-color: rgba($textColor, 0.1);
+                }
+            }
+            & > span > svg {
+                stroke: $textColor;
+            }
+        }
+
+        & .quote-block__img {
+            & svg {
+                & path {
+                    stroke: $textColor;
+                    fill: $textColor;
+                    &._q {
+                        stroke: none;
+                    }
+                }
+             
+            }
+        }
+    }
+
 
     &__body {
         display: flex;
@@ -33,8 +65,9 @@
             margin-right: 3rem;
         }
 
-        & img {
+        & img, & svg {
             width: 100%;
+            height: auto;
         }
     }
 
@@ -55,7 +88,6 @@
     }
 
     &__text {
-        color: #ffffff;
         font-size: 4.2rem;
         font-weight: 300;
         line-height: 1.4em;
@@ -114,7 +146,6 @@
             width: 12.1rem;
             flex: 0 0 12.1rem;
             height: 10.9rem;
-            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
