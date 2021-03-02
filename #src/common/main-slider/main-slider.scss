@@ -1,5 +1,14 @@
 .main-slider {
     position: relative;
+
+    &.main-slider_simple {
+        & .main-slider__img {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
     &__body {
 
         & .swiper-slide {

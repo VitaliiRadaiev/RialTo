@@ -51,6 +51,7 @@
         padding-bottom: 6rem;
     }
 
+
     &.text-img-block_v2 {
         background-color: transparent;
         padding-top: 0;
@@ -165,6 +166,95 @@
         }
     }
 
+    &.text-img-block_v4 {
+        padding-top: 15.5rem;
+        padding-bottom: 19.5rem;
+    
+        @media (max-width: $md2+px) {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+        @media (max-width: $md3+px) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        & .text-img-block__body {
+            flex-direction: row-reverse;
+        }
+
+        & .text-img-block__column-1 {
+            margin-right: 6rem;
+            margin-left: 8rem;
+            flex: 0 0 47.9%;
+
+            @media (max-width: $md2+px) {
+                margin: 0 auto 4rem;
+            }
+        }
+
+        & .text-img-block__img {
+            padding-bottom: 101%;
+        }
+
+        & .text-img-block__img-1 {
+            top: 0;
+            right: 0;
+            width: 80.44%;
+            height: 49.12%;
+            clip-path: none;
+            z-index: 3;
+        }
+
+        & .text-img-block__img-2 {
+            left: 0;
+            bottom: 0;
+            width: 36.4%;
+            height: 46.5%;
+        }
+
+        & .text-img-block__img-3 {
+            position: absolute;
+            right: 0;
+            top: 54%;
+            width: 53%;
+            height: 33%;
+            z-index: 4;
+        }
+
+        & .text-img-block__img-line-1 {
+            top: -7%;
+            left: 64%;
+            width: 32%;
+        }
+        & .text-img-block__img-line-2 {
+            top: 61%;
+            left: 83%;
+            width: 28%;
+            z-index: 1;
+            height: 36%;
+        }
+        & .text-img-block__img-line-3 {
+            position: absolute;
+            top: 18%;
+            left: 4%;
+            width: 58%;
+            z-index: 6;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        & .text-img-block__text {
+            color: $textColor;
+        }
+    }
+
+    &.text-img-block_dark {
+        background-color: $textColor;
+    }
+
     &__body {
         display: flex;
         
@@ -201,7 +291,7 @@
         font-size: 3.8rem;
         font-weight: 400;
         line-height: 1.58em;
-
+        padding: 3rem 0 3rem;
         & p {
             margin-bottom: 1.2em;
         }

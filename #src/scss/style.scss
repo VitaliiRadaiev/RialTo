@@ -488,6 +488,7 @@ button.btn-default {
 @import "../common/quote-block/quote-block";
 @import "../common/social-block/social-block";
 @import "../common/hero/hero";
+@import "../common/advantage/advantage";
 // ==== BLOCKS =====================================================
 
 
@@ -512,5 +513,9 @@ button.btn-default {
 	// ==== PLAY PAGE =====================================================
 	@import "pages/#play";
 	// ==== AND PLAY PAGE =====================================================
+	
+	// ==== VENUE HIRE =====================================================
+	@import "pages/#venue-hire";
+	// ==== AND VENUE HIRE =====================================================
 	
 // ==== AND PAGES =====================================================
