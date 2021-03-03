@@ -179,6 +179,10 @@
             padding-bottom: 6rem;
         }
 
+        &.text-img-block_dark {
+            
+        }
+
         & .text-img-block__body {
             flex-direction: row-reverse;
         }
@@ -253,6 +257,13 @@
 
     &.text-img-block_dark {
         background-color: $textColor;
+
+        & .text-img-block__column-2 {
+            & * {
+                color: #fff;
+                max-width: 49rem;
+            }
+        }
     }
 
     &__body {

@@ -2,6 +2,20 @@
     margin-bottom: 12.5rem;
     @include mb();
 
+    &.advantage_white-text {
+        & * {
+            color: #fff;
+        }
+
+        & .advantage__img {
+            & > svg {
+               & path {
+                    fill: #fff;
+               } 
+            }
+        }
+    }
+
     &__title {
         font-size: 5.4rem;
         font-weight: 300;
