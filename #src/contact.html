@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "RialTo"
+})
+
+<body>
+    <div class="logo-wrap container-big">
+        <a class="logo" href="#">
+            <img src="img/logo/Logo_Mark.svg" alt="logo">
+        </a>
+    </div>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper contact-page _bg">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{
+        "bLine": 'bottom-line',
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
+            <section class="contact-info">
+                <div class="container">
+                    <div class="contact-info__subtitle">
+                        We’d love to chat
+                    </div>
+                    <h2 class="contact-info__title title-2">
+                        Contact us
+                    </h2>
+                    <div class="contact-info__body">
+                        <div class="contact-info__column-1">
+                            <div class="contact-info__inner">
+                                <div class="contact-info__text text-content">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                </div>
+
+                                <form action="#" class="form-contact">
+                                    <div class="form-contact__group">
+                                        <div class="form-contact__item">
+                                            <input type="text" class="input" placeholder="First name *">
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <input type="text" class="input" placeholder="Last name *">
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <input type="email" class="input" placeholder="Email *">
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <input autocomplete="off" type="text" class="input _mask" placeholder="phone" data-mask="+1(99)999-99-99">
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <div class="select-wrap">
+                                                <select name="" class="form-contact__select">
+                                                    <option value="" selected>Type of event</option>
+                                                    <option value="1">highest price</option>
+                                                    <option value="2">Lowest price</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <input type="text" class="input _date" placeholder="Date of event">
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <input type="text" class="input" placeholder="Expected attendance">
+                                        </div>
+                                        <div class="form-contact__item">
+                                            <input type="text" class="input" placeholder="Company">
+                                        </div>
+                                        <div class="form-contact__item form-contact__item_widht-100">
+                                            <textarea class="textarea" placeholder="Anything else?"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" id="iAccept" name="" checked>
+                                        <label class="checkbox-wrap__label" for="iAccept">I’d like to subscribe to the Rialto’s marketing list and receive information about upcoming events and promotions.</label>
+                                    </div>
+                                    <button class="btn-default btn-default_white" type="submit">Get in touch</button>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="contact-info__column-2">
+                            <div class="contact-info__aside aside-contact">
+                                <div class="aside-contact__item">
+                                    <span>
+                                        <img src="img/icons/telephone.svg" alt="icon" class="img-svg">
+                                    </span>
+                                    02476 601 000
+                                </div>
+                                <div class="aside-contact__item">
+                                    <span>
+                                        <img src="img/icons/pin.svg" alt="icon" class="img-svg">
+                                    </span>
+                                    The Rialto Building,
+                                    85 Moseley Avenue,
+                                    Coundon,
+                                    Coventry,
+                                    CV6 1HR
+                                </div>
+                                <a href="#" class="btn-default btn-default_white">Get directions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('common/social-block/_social-block.html',{})
+        </main>
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    @@include('_js.html',{})
+</body>
+
+</html>

@@ -34,7 +34,7 @@
 
 // ==== PLAGINS ===========================================================================================
 @import "plagins/swiper-bundle";
-//@import "plagins/drift-basic";
+@import "plagins/datepicker";
 // ==== // PLAGINS ===========================================================================================
 
 // ==== FORM STYLE DEFAULT ===========================================================================================
@@ -293,6 +293,7 @@ textarea {
 	font-weight: 700;
 	line-height: 1em;
 	text-transform: uppercase;
+	font-family: $mainFontFamily;
 
 	@media (max-width: $md3+px) {
 		font-size: 5.6em;
@@ -404,7 +405,7 @@ textarea {
 }
 
 button.btn-default {
-	
+	background-color: transparent;	
 }
 
 // === and btn ========================================================================
@@ -526,5 +527,9 @@ button.btn-default {
 	// ==== VENUE HIRE =====================================================
 	@import "pages/#venue-hire";
 	// ==== AND VENUE HIRE =====================================================
+	
+	// ==== CONTACT =====================================================
+	@import "pages/#contact";
+	// ==== AND CONTACT =====================================================
 	
 // ==== AND PAGES =====================================================

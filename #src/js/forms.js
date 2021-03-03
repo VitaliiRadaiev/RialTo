@@ -411,19 +411,19 @@ function inputs_init(inputs) {
 // 		input.value = input_g_value;
 // 	}
 // }
-// function input_focus_add(input) {
-// 	input.classList.add('_focus');
-// 	input.parentElement.classList.add('_focus');
-// }
-// function input_focus_remove(input) {
-// 	input.classList.remove('_focus');
-// 	input.parentElement.classList.remove('_focus');
-// }
-// function input_clear_mask(input, input_g_value) {
-// 	input.inputmask.remove();
-// 	input.value = input_g_value;
-// 	input_focus_remove(input);
-// }
+function input_focus_add(input) {
+	input.classList.add('_focus');
+	input.parentElement.classList.add('_focus');
+}
+function input_focus_remove(input) {
+	input.classList.remove('_focus');
+	input.parentElement.classList.remove('_focus');
+}
+function input_clear_mask(input, input_g_value) {
+	input.inputmask.remove();
+	input.value = input_g_value;
+	input_focus_remove(input);
+}
 
 // ==  QUANTITY =====================================================
 let quantityButtons = document.querySelectorAll('.quantity__button');
