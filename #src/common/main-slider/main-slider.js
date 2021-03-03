@@ -5,10 +5,14 @@
         mainSliders.forEach(slider => {
             let dataSlider = new Swiper(slider.querySelector('.main-slider__body'), {
                 slidesPerView: 1,
-                // autoplay: {
-                //     delay: 4000,
-                //     disableOnInteraction: false,
-                // },
+                preloadImages: false,
+                lazy: {
+                  loadPrevNext: true,
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
                 loop: true,
                 effect: 'fade',
                 pagination: {

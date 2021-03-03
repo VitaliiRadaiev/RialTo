@@ -5,6 +5,10 @@
             slidesPerView: 1,
             spaceBetween: 58,
             speed: 800,
+            preloadImages: false,
+            lazy: {
+              loadPrevNext: true,
+            },
             scrollbar: { el: events.querySelector('.swiper-scrollbar') },
             navigation: {
               nextEl: events.querySelector('.events__slider-btn-next'),
