@@ -27,19 +27,19 @@ $(document).ready(function () {
 	});
 
 
-			// ==== ADD PADDING-TOP ================================
-			// {
-			// 	let wrapper = document.querySelector('.wrapper');
-			// 	if (wrapper) {
-			// 		let header = document.querySelector('.header');
-			// 		if(header) {
-			// 			let headerHeight = header.clientHeight;
-			// 			wrapper.style.paddingTop = headerHeight + 'px';
-			// 		}
+			//==== ADD PADDING-TOP ================================
+			{
+				let wrapper = document.querySelector('.wrapper');
+				if (wrapper) {
+					let header = document.querySelector('.header._padding-top');
+					if(header) {
+						let headerHeight = header.clientHeight;
+						wrapper.style.paddingTop = headerHeight + 'px';
+					}
 					
-			// 	}
-			// }
-			// ==== AND ADD PADDING-TOP ================================
+				}
+			}
+			//==== AND ADD PADDING-TOP ================================
 
 	//SlideToggle
 let _slideUp = (target, duration = 500) => {
@@ -177,31 +177,6 @@ spollerInit()
 // === // Spollers ==================================================================
 
 
-// === lazy load ==================================================================
-document.addEventListener("DOMContentLoaded", function () {
-	var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-	if ("IntersectionObserver" in window) {
-		let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-			entries.forEach(function (entry) {
-				if (entry.isIntersecting) {
-					let lazyImage = entry.target;
-					lazyImage.src = lazyImage.dataset.src;
-					//lazyImage.srcset = lazyImage.dataset.srcset;
-					lazyImage.classList.remove("lazy");
-					lazyImageObserver.unobserve(lazyImage);
-				}
-			});
-		});
-
-		lazyImages.forEach(function (lazyImage) {
-			lazyImageObserver.observe(lazyImage);
-		});
-	} else {
-		// Possibly fall back to event handlers here
-	}
-});
-// === // lazy load ==================================================================
 
 
 if($('.anchor').length>0) {
@@ -876,6 +851,19 @@ if(priceSlider) {
 // === Burger Handler =====================================================================	;
 	
 ;
+	{
+    let eventsList = document.querySelector('.events-listing__body');
+    if(eventsList) {
+        let observer = new MutationObserver(mutationRecords => {
+            lazyLoadHandler();
+          });
+          
+          observer.observe(eventsList, {
+            childList: true, 
+          });
+    }
+}
+;
 	let parallaxItems = document.querySelectorAll('._parallax');
 
 window.addEventListener('scroll', () => {
@@ -904,33 +892,16 @@ function parallax(elem) {
             lazy: {
               loadPrevNext: true,
             },
+            autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+          },
             scrollbar: { el: events.querySelector('.swiper-scrollbar') },
             navigation: {
               nextEl: events.querySelector('.events__slider-btn-next'),
               prevEl: events.querySelector('.events__slider-btn-prev'),
             },
           });
-    }
-};
-	{
-    let menuLink = document.querySelectorAll('.menu .menu__link');
-    if(menuLink.length) {
-        menuLink.forEach(link => {
-            link.innerHTML = link.textContent.replace(/./g, "<span class='letter'>$&</span>");
-
-            for(let letter of link.children) {
-                letter.addEventListener('mouseenter', () => {
-                    letter.style.transform = "scale(1.6)";
-                    if(letter.nextElementSibling) letter.nextElementSibling.style.transform = "scale(1.3)";
-                    if(letter.previousElementSibling) letter.previousElementSibling.style.transform = "scale(1.3)";
-                })
-                letter.addEventListener('mouseleave', () => {
-                    letter.style.transform = "scale(1)";
-                    if(letter.nextElementSibling) letter.nextElementSibling.style.transform = "scale(1)";
-                    if(letter.previousElementSibling) letter.previousElementSibling.style.transform = "scale(1)";
-                })
-            }
-        })
     }
 };
 	{
@@ -1066,13 +1037,40 @@ function parallax(elem) {
 
 ;
 	
+
+
+	//=== checkbox-wrap add id for input ======================
+	let checkBoxes = document.querySelectorAll('.checkbox-wrap');
+	if(checkBoxes.length) {
+		checkBoxes.forEach(checkBox => {
+			let input = checkBox.querySelector('input[type="checkbox"]');
+			let label = checkBox.querySelector('.checkbox-wrap__label');
+
+			let id = label.getAttribute('for');
+
+			input.id = id;
+			
+			input.addEventListener('change', () => {
+				console.dir(input.checked);
+				if(input.checked) {
+					checkBox.classList.add('_checked')
+				} else {
+					checkBox.classList.remove('_checked')
+				}
+			})
+			
+		})
+	}
+	//=== // checkbox-wrap add id for input ======================
 });
 
 //// html example --- <img class="lazy" data-src="https://images.unsplash.com/photo-1606851091851-e8c8c0fca5ba?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" src="img/photo/placeholder.jpg" alt="img">
 
 
 // === lazy load ==================================================================
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", lazyLoadHandler);
+
+function lazyLoadHandler () {
 	var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
     let active = false;
 
@@ -1128,5 +1126,5 @@ document.addEventListener("DOMContentLoaded", function () {
           window.addEventListener("orientationchange", lazyLoad);
     }
     
-});
+}
 // === // lazy load ==================================================================;

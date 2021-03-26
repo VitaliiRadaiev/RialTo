@@ -9,6 +9,10 @@
             lazy: {
               loadPrevNext: true,
             },
+            autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+          },
             scrollbar: { el: events.querySelector('.swiper-scrollbar') },
             navigation: {
               nextEl: events.querySelector('.events__slider-btn-next'),

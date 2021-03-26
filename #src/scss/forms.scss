@@ -225,6 +225,17 @@
 
 //<CHECK (chk+tab)>====================================================================================================
 .checkbox-wrap {
+	&._checked {
+		& .checkbox-wrap__label {
+			&:before {
+				background-image: url(../img/icons/check.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+
     & .checkbox {
         display: none;
 

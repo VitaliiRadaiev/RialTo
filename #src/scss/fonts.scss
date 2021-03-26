@@ -1,65 +1,65 @@
-@include font("TTNorms", "TTNorms-Black", "900", "normal");
-@include font("TTNorms", "TTNorms-Bold", "700", "normal");
-@include font("TTNorms", "TTNorms-ExtraBold", "800", "normal");
-@include font("TTNorms-Italic", "TTNorms-Italic", "400", "normal");
-@include font("TTNorms", "TTNorms-Light", "300", "normal");
-@include font("TTNorms", "TTNorms-Regular", "400", "normal");
-@include font("TTNorms", "TTNorms-Medium", "500", "normal");
+// @include font("TTNorms", "TTNorms-Black", "900", "normal");
+// @include font("TTNorms", "TTNorms-Bold", "700", "normal");
+// @include font("TTNorms", "TTNorms-ExtraBold", "800", "normal");
+// @include font("TTNorms-Italic", "TTNorms-Italic", "400", "normal");
+// @include font("TTNorms", "TTNorms-Light", "300", "normal");
+// @include font("TTNorms", "TTNorms-Regular", "400", "normal");
+// @include font("TTNorms", "TTNorms-Medium", "500", "normal");
 
 
 
-// @font-face {
-//   font-family: "TTNorms";
-//   font-display: swap;
-//   src: url("../fonts/TT Norms Pro Bold.ttf") format("opentype");
-//   font-weight: 700;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "TTNorms";
+  font-display: swap;
+  src: url("../fonts/TT Norms Pro Bold.ttf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: "TTNorms-Italic";
-//   font-display: swap;
-//   src: url("../fonts/TT Norms Pro Italic.ttf") format("opentype");
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
-
-// @font-face {
-//   font-family: "TTNorms";
-//   font-display: swap;
-//   src:url("../fonts/TT Norms Pro Medium.ttf") format("opentype");
-//   font-weight: 500;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "TTNorms";
-//   font-display: swap;
-//   src:url("../fonts/TT Norms Pro Regular.ttf") format("opentype");
-//   font-weight: 400;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "TTNorms-Italic";
+  font-display: swap;
+  src: url("../fonts/TT Norms Pro Italic.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 
-// @font-face {
-//   font-family: "TTNorms";
-//   font-display: swap;
-//   src:url("../fonts/TT Norms Pro Black.otf") format("opentype");
-//   font-weight: 900;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: "TTNorms";
-//   font-display: swap;
-//   src:url("../fonts/TT Norms Pro ExtraBold.otf") format("opentype");
-//   font-weight: 800;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: "TTNorms";
-//   font-display: swap;
-//   src:url("../fonts/TT Norms Pro Light.otf") format("opentype");
-//   font-weight: 300;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "TTNorms";
+  font-display: swap;
+  src:url("../fonts/TT Norms Pro Medium.ttf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTNorms";
+  font-display: swap;
+  src:url("../fonts/TT Norms Pro Regular.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "TTNorms";
+  font-display: swap;
+  src:url("../fonts/TT Norms Pro Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTNorms";
+  font-display: swap;
+  src:url("../fonts/TT Norms Pro ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTNorms";
+  font-display: swap;
+  src:url("../fonts/TT Norms Pro Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,6 +1,6 @@
 .quote-block {
     padding: 17rem 0 26.9rem;
-
+    min-width: 0;
     @media (max-width: $md2+px) {
         padding: 10rem 0 16.9rem;
     }

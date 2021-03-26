@@ -37,5 +37,15 @@
         & .events-listing__body {
             margin-bottom: 0;
         }
+
+        & .card-event__img {
+            @media (min-width: 992px) {
+                &:hover {
+                    & img {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
     }
 }

@@ -9400,7 +9400,9 @@
 
 
 // === lazy load ==================================================================
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", lazyLoadHandler);
+
+function lazyLoadHandler () {
 	var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
     let active = false;
 
@@ -9456,7 +9458,7 @@ document.addEventListener("DOMContentLoaded", function () {
           window.addEventListener("orientationchange", lazyLoad);
     }
     
-});
+}
 // === // lazy load ==================================================================;
 /*!
  * dist/inputmask.min

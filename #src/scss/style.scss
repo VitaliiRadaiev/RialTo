@@ -79,19 +79,15 @@ section {
 	display: block;
 }
 html {
-	font-size: 10px;
+	 font-size: 10px;
 
 	@media (min-width: 992px) {
 		font-size: 7.5px;
 	}
-
-	@media (min-width: 1920px) {
-		font-size: 10px;
-	}
 }
 html,
 body {
-	height: 100%;
+
 	min-width: $minwidth;
 	margin: 0 auto;
 }
@@ -230,9 +226,15 @@ textarea {
 		top: 6.7rem;
 		pointer-events: none;
 		mix-blend-mode: difference;
+	
+
+		@media (max-width: 1440px) {
+			padding-left: 6rem;
+		}
 
 		@media (max-width: $md2+px) {
 			top: 1.5rem;
+			padding-left: 1.5rem;
 		}
 	}
 
@@ -531,5 +533,9 @@ button.btn-default {
 	// ==== CONTACT =====================================================
 	@import "pages/#contact";
 	// ==== AND CONTACT =====================================================
+	
+	// ==== FAQ PAGE =====================================================
+	@import "pages/#FAQ";
+	// ==== AND FAQ PAGE =====================================================
 	
 // ==== AND PAGES =====================================================

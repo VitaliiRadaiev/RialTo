@@ -27,32 +27,57 @@ $(document).ready(function () {
 	});
 
 
-			// ==== ADD PADDING-TOP ================================
-			// {
-			// 	let wrapper = document.querySelector('.wrapper');
-			// 	if (wrapper) {
-			// 		let header = document.querySelector('.header');
-			// 		if(header) {
-			// 			let headerHeight = header.clientHeight;
-			// 			wrapper.style.paddingTop = headerHeight + 'px';
-			// 		}
+			//==== ADD PADDING-TOP ================================
+			{
+				let wrapper = document.querySelector('.wrapper');
+				if (wrapper) {
+					let header = document.querySelector('.header._padding-top');
+					if(header) {
+						let headerHeight = header.clientHeight;
+						wrapper.style.paddingTop = headerHeight + 'px';
+					}
 					
-			// 	}
-			// }
-			// ==== AND ADD PADDING-TOP ================================
+				}
+			}
+			//==== AND ADD PADDING-TOP ================================
 
 	@@include('_function.js');
 	@@include('files/dynamic_adapt.js');
 	@@include('forms.js');
 	@@include('../common/burger/burger.js');
 	@@include('pages/#home.js');
+	@@include('pages/#events-listing.js');
 	@@include('blocks/parallax.js');
 	@@include('../common/events-slider/events-slider.js');
-	@@include('../common/header/header.js');
 	@@include('../common/main-slider/main-slider.js');
 	@@include('../common/quote-block/quote-block.js');
 	@@include('../common/video/video.js');
 	
+
+
+	//=== checkbox-wrap add id for input ======================
+	let checkBoxes = document.querySelectorAll('.checkbox-wrap');
+	if(checkBoxes.length) {
+		checkBoxes.forEach(checkBox => {
+			let input = checkBox.querySelector('input[type="checkbox"]');
+			let label = checkBox.querySelector('.checkbox-wrap__label');
+
+			let id = label.getAttribute('for');
+
+			input.id = id;
+			
+			input.addEventListener('change', () => {
+				console.dir(input.checked);
+				if(input.checked) {
+					checkBox.classList.add('_checked')
+				} else {
+					checkBox.classList.remove('_checked')
+				}
+			})
+			
+		})
+	}
+	//=== // checkbox-wrap add id for input ======================
 });
 
 //@@include('plagins/lazy-load.js');
