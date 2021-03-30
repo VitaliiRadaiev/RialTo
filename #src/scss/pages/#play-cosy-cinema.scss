@@ -1,0 +1,57 @@
+.play-cosy-cinema-page {
+    & .hero {
+        margin-bottom: 12.3rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    & .events {
+        margin-bottom: 20rem;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+
+
+
+.gallery {
+    margin-bottom: 10.3rem;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 6rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1.2rem;
+
+        @media (max-width: $md2+px) {
+            margin: 0 -0.75rem;
+        }
+
+        & li {
+            flex: 0 1 33.3333%;
+            padding: 0 1.2rem;
+            margin-bottom: 2.4rem;
+
+            @media (max-width: $md2+px) {
+                padding: 0 0.75rem;
+            }
+
+            @media (max-width: 575px) {
+                flex: 0 1 50%;
+            }
+        }
+    }
+
+    &__item {
+        height: 0;
+        padding-bottom: 109%;
+    }
+}
