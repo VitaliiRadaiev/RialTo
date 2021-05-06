@@ -5,32 +5,60 @@
 })
 
 <body>
-	<div class="logo-wrap container-big">
-		<a class="logo" href="#">
-			<img src="img/logo/Logo_Mark.svg" alt="logo">
-		</a>
-	</div>
-	<!-- == WRAPPER ================== -->
-	<div class="wrapper events-listing-page">
-		<!-- == TOP LINE ================== -->
-		@@include('common/header/_header.html',{
-            "bLine": 'bottom-line',
+    <div class="logo-wrap container-big">
+        <a class="logo" href="#">
+            <img src="img/logo/Logo_Mark.svg" alt="logo">
+        </a>
+    </div>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper events-listing-page">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{
+        "bLine": 'bottom-line',
         })
-		<!-- == // TOP LINE ================== -->
+        <!-- == // TOP LINE ================== -->
 
-		<!-- == PAGE CONTENT ================== -->
-		<main class="page">
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
             <section class="events-listing-head">
                 <div class="container">
                     <form action="#" class="events-listing-head__top">
-                        <h2 class="events-listing-head__title title-2">What’s on</h2>
-                        <div class="select-wrap">
-                            <select name="" class="events-listing-head__select">
-                                <option value="" selected>At the Rialto</option>
-                                <option value="1">highest price</option>
-                                <option value="2">Lowest price</option>
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="search what's on here...">
+                            <button type="submit" class="search__btn">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="310.42px"
+                                    height="310.42px" viewBox="0 0 310.42 310.42"
+                                    style="enable-background:new 0 0 310.42 310.42;" xml:space="preserve">
+                                    <path d="M273.587,214.965c49.11-49.111,49.109-129.021,0-178.132c-49.111-49.111-129.02-49.111-178.13,0
+                                            C53.793,78.497,47.483,140.462,76.51,188.85c0,0,2.085,3.498-0.731,6.312c-16.065,16.064-64.263,64.263-64.263,64.263
+                                            c-12.791,12.79-15.836,30.675-4.493,42.02l1.953,1.951c11.343,11.345,29.229,8.301,42.019-4.49c0,0,48.096-48.097,64.128-64.128
+                                            c2.951-2.951,6.448-0.866,6.448-0.866C169.958,262.938,231.923,256.629,273.587,214.965z M118.711,191.71
+                                            c-36.288-36.288-36.287-95.332,0.001-131.62c36.288-36.287,95.332-36.288,131.619,0c36.288,36.287,36.288,95.332,0,131.62
+                                            C214.043,227.996,155,227.996,118.711,191.71z" />
 
-                            </select>
+                                    <path d="M126.75,118.424c-1.689,0-3.406-0.332-5.061-1.031c-6.611-2.798-9.704-10.426-6.906-17.038
+                                            c17.586-41.559,65.703-61.062,107.261-43.476c6.611,2.798,9.704,10.426,6.906,17.038c-2.799,6.612-10.425,9.703-17.039,6.906
+                                            c-28.354-11.998-61.186,1.309-73.183,29.663C136.629,115.445,131.815,118.424,126.75,118.424z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="filter">
+                            <div class="filter__label">filter:</div>
+                            <ul class="filter__list">
+                                <li>
+                                    <a href="#" class="filter__item btn-default btn-default_white active">all</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter__item btn-default btn-default_white ">cosy cinema club</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter__item btn-default btn-default_white ">the hall</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter__item btn-default btn-default_white ">the loft</a>
+                                </li>
+                            </ul>
                         </div>
                     </form>
                     <div class="events-listing-head__body">
@@ -56,7 +84,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event01.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event01.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -70,7 +99,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event02.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event02.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -84,7 +114,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event03.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event03.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -98,7 +129,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event01.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event01.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -112,7 +144,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event02.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event02.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -126,7 +159,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event03.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event03.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -140,7 +174,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event01.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event01.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -154,7 +189,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event02.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event02.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -168,7 +204,8 @@
                             <div href="#" class="card-event">
                                 <div class="card-event__img ibg">
                                     <a href="#">
-                                        <img class="lazy" data-src="img/photo/card-event03.jpg" src="img/photo/placeholder.jpg" alt="img">
+                                        <img class="lazy" data-src="img/photo/card-event03.jpg"
+                                            src="img/photo/placeholder.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="card-event__date">10.07.21</div>
@@ -180,21 +217,22 @@
                         </div>
                     </div>
                     <div class="events-listing__bottom">
-                        <a href="#" class="events-listing__load-more title-2">LOAD MORE<span>.</span><span>.</span><span>.</span></a>
+                        <a href="#" class="events-listing__load-more title-2">LOAD
+                            MORE<span>.</span><span>.</span><span>.</span></a>
                     </div>
                 </div>
             </section>
 
             @@include('common/social-block/_social-block.html',{})
         </main>
-		<!-- == // PAGE CONTENT ================== -->
-		<!-- == FOOTER ================== -->
-		@@include('common/footer/_footer.html',{})
-		<!-- == // FOOTER ================== -->
-	</div>
-	<!-- == // WRAPPER ================== -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-	@@include('_js.html',{})
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    @@include('_js.html',{})
 </body>
 
 </html>

@@ -1,0 +1,48 @@
+.filter {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md2+px) {
+        display: block;
+    }
+
+    &__label {
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        flex: 0 0 auto;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: $md2+px) {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        & > li {
+            flex: 0 0 auto;
+            margin-right: 25px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item {
+        &.active {
+            background-color: $mainColor;
+            border-color: $mainColor;
+        }
+
+        @media (max-width: $md2+px) {
+            &.btn-default {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

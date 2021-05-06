@@ -1,0 +1,95 @@
+.search {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.3rem solid rgba(255, 255, 255, 0.1);
+    &__input {
+        width: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: #fff;
+        font-size: 7rem;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        font-family: $mainFontFamily;
+        padding-right: 2.5rem;
+
+        @media (max-width: 1439px) {
+            font-size: 6rem;
+        }
+
+        @media (max-width: 1267px) {
+            font-size: 5rem;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 1.8rem;
+
+        }
+
+        &::placeholder {
+            font-size: 7rem;
+            font-weight: 700;
+            line-height: 1em;
+            text-transform: uppercase;
+            font-family: $mainFontFamily;
+            color: #fff;
+            @media (max-width: 1439px) {
+                font-size: 6rem;
+            }
+    
+            @media (max-width: 1267px) {
+                font-size: 5rem;
+            }
+    
+            @media (max-width: $md3+px) {
+                font-size: 3rem;
+            }
+    
+            @media (max-width: $md4+px) {
+                font-size: 1.8rem;
+
+            }
+        }
+    }
+
+    &__btn {
+        flex: 0 0 7.5rem;
+        height: 7.5rem;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease;
+        padding: 1rem;
+
+        @media (max-width: $md3+px) {
+            flex: 0 0 4.5rem;
+            height: 4.5rem;
+        }
+        
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1)
+            }
+        }
+
+        & svg {
+            width: 100%;
+            max-width: 4.6rem;
+            height: auto;
+            transform: scale(-1,1);
+
+            & path {
+                fill: #fff;
+            }
+        }
+    }
+}
