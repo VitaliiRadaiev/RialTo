@@ -18,6 +18,11 @@
             flex-direction: column;
             padding: 22rem 1.5rem;
             justify-content: center;
+            opacity: 0 !important;
+
+            &.swiper-slide-active {
+                opacity: 1 !important;
+            }
 
             @media (max-width: $md2+px) {
                 padding: 12rem 1.5rem 16rem;

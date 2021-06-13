@@ -1036,6 +1036,116 @@ function parallax(elem) {
 }
 
 ;
+	function cardVideoHandler() {
+	function togglePlayPause(video,btn) {
+		if(video.paused) {
+			video.play();
+			btn.firstElementChild.className = 'icon-pause';
+			video.setAttribute('controls', true);
+
+		} else {
+			video.pause();
+			btn.firstElementChild.className = 'icon-play2';
+			btn.style.opacity = '1';
+		}
+	}
+
+	let videoBlock = document.querySelectorAll('.video-block');
+	if(videoBlock.length) {
+		videoBlock.forEach((item) => {
+			let video = item.querySelector('.video-block__video');
+			let btn = item.querySelector('.video-block__play-pause');
+
+			if(video) {
+				if(video.hasAttribute('data-youtube-url')) {
+					let url = video.dataset.youtubeUrl;
+					btn.addEventListener('click', () => {
+						video.innerHTML = `<iframe src="${url}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+					})
+
+				} else {
+					btn.addEventListener('click', (e) => {
+						e.preventDefault();
+						togglePlayPause(video,btn);
+					});
+					video.addEventListener('ended', () => {
+						video.pause();
+						btn.firstElementChild.className = 'icon-play2';
+						btn.style.opacity = '1';
+						video.removeAttribute('controls');
+					});
+					video.addEventListener('play', () => {
+						btn.firstElementChild.className = 'icon-pause';
+					});
+					video.addEventListener('pause', () => {
+						btn.firstElementChild.className = 'icon-play2';
+					});
+					video.addEventListener('mouseenter', (e) => { 
+						if(!video.paused) {
+							btn.style.opacity = '1';
+						} 
+					});
+					video.addEventListener('mouseleave', (e) => { 
+						if(!video.paused) {
+							btn.style.opacity = '0';
+						} 
+					});
+				}
+			}
+		})
+	}
+
+}
+
+cardVideoHandler();;
+	//RATING
+$('.rating.edit .star').hover(function () {
+    var block = $(this).parents('.rating');
+    block.find('.rating__activeline').css({ width: '0%' });
+    var ind = $(this).index() + 1;
+    var linew = ind / block.find('.star').length * 100;
+    setrating(block, linew);
+}, function () {
+    var block = $(this).parents('.rating');
+    block.find('.star').removeClass('active');
+    var ind = block.find('input').val();
+    var linew = ind / block.find('.star').length * 100;
+    setrating(block, linew);
+});
+$('.rating.edit .star').click(function (event) {
+    var block = $(this).parents('.rating');
+    var re = $(this).index() + 1;
+    block.find('input').val(re);
+    var linew = re / block.find('.star').length * 100;
+    setrating(block, linew);
+});
+$.each($('.rating'), function (index, val) {
+    var ind = $(this).find('input').val();
+    var linew = ind / $(this).parent().find('.star').length * 100;
+    setrating($(this), linew);
+});
+function setrating(th, val) {
+    th.find('.rating__activeline').css({ width: val + '%' });
+};
+	let testimonials = document.querySelector('.testimonials');
+if(testimonials) {
+    let dataslider = new Swiper(testimonials.querySelector('.testimonials__slider'), {
+        // autoplay: {
+        //     delay: 6000,
+        //     disableOnInteraction: false,
+        // },
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 15,
+        speed: 800,
+        loop: true,
+        navigation: {
+            nextEl: testimonials.querySelector('.testimonials__btn-prev'),
+            prevEl: testimonials.querySelector('.testimonials__btn-next'),
+        },
+    })
+};
 	
 
 

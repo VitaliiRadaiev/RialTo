@@ -52,6 +52,9 @@ $(document).ready(function () {
 	@@include('../common/main-slider/main-slider.js');
 	@@include('../common/quote-block/quote-block.js');
 	@@include('../common/video/video.js');
+	@@include('../common/video-block/video-block.js');
+	@@include('../common/rating/rating.js');
+	@@include('../common/testimonials/testimonials.js');
 	
 
 

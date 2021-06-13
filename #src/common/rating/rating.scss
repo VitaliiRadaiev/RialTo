@@ -27,7 +27,7 @@
 	}
 }
 .rating-wrap{
-	display: table;font-size: 0; width: 80px;
+	display: table;font-size: 0; width: 100px;
 	height: 15px;
 }
 .rating{
@@ -38,21 +38,21 @@
 	height: 15px;
 	&.edit .star{cursor: pointer;}
 
-	.star{width: 16px;height: 13px;display: inline-block;position: relative;z-index: 3; 
+	.star{width: 16px;height: 15px;display: inline-block;position: relative;z-index: 3; 
 
 	}
 }
 .rating__line{
 	position: absolute;
 	width: auto;
-	height: 13px;
+	height: 15px;
 	top: 0;left: 0;
 	//background: url('../img/icons/Star-empty.svg') 0 0 no-repeat;
 	z-index: 1;
 	background-size:80px 100%;
 	display: flex;
-	font-size: 12px;
-	color: #FFC107;
+	font-size: 15px;
+	color:  #211a1b;
 	& > span {
 		margin-right: 5px;
 	}
@@ -60,15 +60,15 @@
 .rating__activeline{
 	position: absolute;
 	width: 0px;
-	height: 13px;
+	height: 15px;
 	top: 0;left: 0;
 	//background: url('../img/icons/Star-full.svg') 0 0 no-repeat;
 	z-index: 2;
 	background-size:136px 100%;
 	display: flex;
-	font-size: 12px;
+	font-size: 15px;
 	overflow: hidden;
-	color: #FFC107;
+	color:  #211a1b;
 	& > span {
 		margin-right: 5px;
 	}
