@@ -909,17 +909,19 @@ function parallax(elem) {
     let mainSliders = document.querySelectorAll('.main-slider');
     if(mainSliders.length) {
         mainSliders.forEach(slider => {
+          let isautoplay = true;
+          if(slider.hasAttribute('data-swiper-autoplay')) {
+            isautoplay = slider.dataset.swiperAutoplay
+          }
+
             let dataSlider = new Swiper(slider.querySelector('.main-slider__body'), {
                 slidesPerView: 1,
                 preloadImages: false,
                 lazy: {
                   loadPrevNext: true,
                 },
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                },
-                loop: true,
+                autoplay: {delay: 4000,disableOnInteraction: false,},
+                autoplay: isautoplay,
                 effect: 'fade',
                 pagination: {
                   el: slider.querySelector('.swiper-pagination'),
@@ -930,9 +932,14 @@ function parallax(elem) {
                   prevEl: slider.querySelector('.main-slider__btn_prev'),
                 },
                 on: {
-                  init: () => {
-                    cardVideoHandler();
-                  },
+                  // init: () => {
+                  //   console.log('init');
+                    
+                  //   if(!slider.classList.contains('addedVideoHandler')) {
+                  //     cardVideoHandler();
+                  //     slider.classList.add('addedVideoHandler')
+                  //   }
+                  // },
                   slideChange: (swiper) => {
                     let slides = slider.querySelectorAll('.swiper-slide');
                     slides.forEach(slide => {
@@ -994,6 +1001,7 @@ function parallax(elem) {
 
 	let videoBlock = document.querySelectorAll('._video');
 	if(videoBlock.length) {
+
 		let timerId;
 		videoBlock.forEach((item) => {
 			//let videoWrap = card.querySelector('.card-video__video-wrap');
@@ -1035,8 +1043,8 @@ function parallax(elem) {
 
 }
 
-;
-	function cardVideoHandler() {
+cardVideoHandler();;
+	function VideoHandler() {
 	function togglePlayPause(video,btn) {
 		if(video.paused) {
 			video.play();
@@ -1053,6 +1061,7 @@ function parallax(elem) {
 	let videoBlock = document.querySelectorAll('.video-block');
 	if(videoBlock.length) {
 		videoBlock.forEach((item) => {
+			let videoWrap = item.querySelector('.video-block__video-wrap');
 			let video = item.querySelector('.video-block__video');
 			let btn = item.querySelector('.video-block__play-pause');
 
@@ -1080,13 +1089,13 @@ function parallax(elem) {
 					video.addEventListener('pause', () => {
 						btn.firstElementChild.className = 'icon-play2';
 					});
-					video.addEventListener('mouseenter', (e) => { 
+					videoWrap.addEventListener('mouseenter', (e) => { 
 						if(!video.paused) {
 							btn.style.opacity = '1';
 						} 
 					});
-					video.addEventListener('mouseleave', (e) => { 
-						if(!video.paused) {
+					videoWrap.addEventListener('mouseleave', (e) => { 
+						if(!video.paused ) {
 							btn.style.opacity = '0';
 						} 
 					});
@@ -1097,7 +1106,7 @@ function parallax(elem) {
 
 }
 
-cardVideoHandler();;
+VideoHandler();;
 	//RATING
 $('.rating.edit .star').hover(function () {
     var block = $(this).parents('.rating');

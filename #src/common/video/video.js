@@ -14,6 +14,7 @@ function cardVideoHandler() {
 
 	let videoBlock = document.querySelectorAll('._video');
 	if(videoBlock.length) {
+
 		let timerId;
 		videoBlock.forEach((item) => {
 			//let videoWrap = card.querySelector('.card-video__video-wrap');
@@ -55,3 +56,4 @@ function cardVideoHandler() {
 
 }
 
+cardVideoHandler();

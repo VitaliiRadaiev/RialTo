@@ -305,9 +305,24 @@
     </div>
 </section>
 
-			<section class="main-slider main-slider_simple">
+			<section class="main-slider main-slider_simple" data-swiper-autoplay="false">
 				<div class="main-slider__body swiper-container">
 					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="main-slider__video _video ibg">
+                                <video muted loop  preload="none" poster="img/photo/video-poster.jpg">
+                                    <source src="img/videoForTest.mp4" type="video/mp4" />
+                                </video>
+                                <div class="main-slider__video-control">
+                                    <div class="main-slider__video-play">
+                                        <img src="img/icons/Play_Icon.svg" alt="play" class="img-svg">
+                                    </div>
+                                    <div class="main-slider__video-pause">
+                                        <img src="img/icons/pause.svg" alt="play" class="img-svg">
+                                    </div>
+                                </div>
+                            </div>
+						</div>
 						<div class="swiper-slide">
 							<div class="main-slider__img ibg">
 								<img data-src="img/photo/restaurant2.jpg" class="swiper-lazy">

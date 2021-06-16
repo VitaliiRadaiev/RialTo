@@ -5635,6 +5635,118 @@ button.btn-default {
   padding-bottom: 109%;
 }
 
+.members-club {
+  color: #fff;
+  text-align: center;
+  padding: 80px 0 197px;
+}
+
+.members-club__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  letter-spacing: 0.051em;
+  font-size: 58px;
+}
+
+.members-club__subtitle {
+  font-size: 4.2rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin-bottom: 67px;
+  font-style: italic;
+}
+
+.members-club__body {
+  margin: 0 auto 60px;
+}
+
+.members-club__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47%;
+          flex: 0 0 47%;
+  min-height: 231px;
+  position: relative;
+}
+
+.members-club__img img {
+  z-index: 2;
+}
+
+.members-club__img-line-1 {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 23px;
+}
+
+.members-club__img-line-1:before {
+  position: absolute;
+  content: '';
+  height: 345px;
+  width: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 10px;
+  left: 70px;
+}
+
+.members-club__img-line-2 {
+  position: absolute;
+  z-index: 3;
+  top: 28px;
+  left: 10px;
+}
+
+.members-club__img-line-2:before {
+  position: absolute;
+  content: '';
+  height: 345px;
+  width: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 10px;
+  left: 70px;
+}
+
+.members-club__list {
+  text-align: left;
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 20px;
+}
+
+.members-club__list > li {
+  position: relative;
+}
+
+.members-club__list > li:before {
+  position: absolute;
+  content: '.';
+  top: 0px;
+  left: -10px;
+}
+
+.members-club__btn {
+  color: #fff;
+}
+
 @media (min-width: 576px) {
   .testimonials__item {
     display: -webkit-box;
@@ -5656,6 +5768,18 @@ button.btn-default {
     width: 4.4rem;
     height: 2.4rem;
     margin-top: 2.5rem;
+  }
+
+  .members-club__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 874px;
+    margin: 0 auto 103px;
+  }
+
+  .members-club__img {
+    margin-right: 58px;
   }
 }
 
@@ -5836,6 +5960,10 @@ button.btn-default {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
+  }
+
+  .members-club__list {
+    margin-right: -20px;
   }
 }
 
@@ -6883,6 +7011,24 @@ button.btn-default {
   .gallery {
     margin-bottom: 6rem;
   }
+
+  .members-club {
+    padding-bottom: 100px;
+  }
+
+  .members-club__title {
+    font-size: 46px;
+    margin-bottom: 30px;
+  }
+
+  .members-club__subtitle {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+  }
+
+  .members-club__img {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -7316,6 +7462,16 @@ button.btn-default {
 
   .textarea::placeholder {
     font-size: 2.2rem;
+  }
+
+  .members-club__subtitle {
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+  }
+
+  .members-club__list {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
   }
 }
 

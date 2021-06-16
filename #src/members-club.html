@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "RialTo"
+})
+
+<body>
+    <div class="logo-wrap container-big">
+        <a class="logo" href="#">
+            <img src="img/logo/Logo_Mark.svg" alt="logo">
+        </a>
+    </div>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper members-club-page _bg">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{
+        "bLine": 'bottom-line',
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
+            <section class="members-club">
+                <div class="container">
+                    <h3 class="members-club__title">Members club</h3>
+                    <div class="members-club__subtitle">Why should you sign-up to the Rialto Plaza Members Club?</div>
+
+                    <div class="members-club__body">
+                        <div class="members-club__img ibg">
+                            <span class="members-club__img-line-1 _parallax" data-transition="6"></span>
+                            <span class="members-club__img-line-2 _parallax" data-transition="6"></span>
+                            <img src="img/photo/promo-bg.jpg" alt="">
+                        </div>
+                        <ul class="members-club__list">
+                            <li>It's Free!</li>
+                            <li>Priority Access for Events</li>
+                            <li>Birthday Treats</li>
+                            <li>Weekly Prize Draws</li>
+                            <li>Preferential Bookings at The loft</li>
+                            <li>And Much More!</li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="members-club__btn btn-default btn-default_white">Sign up today</a>
+                </div>
+            </section>
+        </main>
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    @@include('_js.html',{})
+</body>
+
+</html>

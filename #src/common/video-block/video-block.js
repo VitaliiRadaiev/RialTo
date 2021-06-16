@@ -1,4 +1,4 @@
-function cardVideoHandler() {
+function VideoHandler() {
 	function togglePlayPause(video,btn) {
 		if(video.paused) {
 			video.play();
@@ -15,6 +15,7 @@ function cardVideoHandler() {
 	let videoBlock = document.querySelectorAll('.video-block');
 	if(videoBlock.length) {
 		videoBlock.forEach((item) => {
+			let videoWrap = item.querySelector('.video-block__video-wrap');
 			let video = item.querySelector('.video-block__video');
 			let btn = item.querySelector('.video-block__play-pause');
 
@@ -42,13 +43,13 @@ function cardVideoHandler() {
 					video.addEventListener('pause', () => {
 						btn.firstElementChild.className = 'icon-play2';
 					});
-					video.addEventListener('mouseenter', (e) => { 
+					videoWrap.addEventListener('mouseenter', (e) => { 
 						if(!video.paused) {
 							btn.style.opacity = '1';
 						} 
 					});
-					video.addEventListener('mouseleave', (e) => { 
-						if(!video.paused) {
+					videoWrap.addEventListener('mouseleave', (e) => { 
+						if(!video.paused ) {
 							btn.style.opacity = '0';
 						} 
 					});
@@ -59,4 +60,4 @@ function cardVideoHandler() {
 
 }
 
-cardVideoHandler();
+VideoHandler();
